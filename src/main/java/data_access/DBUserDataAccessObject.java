@@ -15,10 +15,10 @@ import okhttp3.Response;
 import use_case.change_password.ChangePasswordUserDataAccessInterface;
 import use_case.login.LoginUserDataAccessInterface;
 import use_case.signup.SignupUserDataAccessInterface;
-
 /**
  * The DAO for user data.
  */
+
 public class DBUserDataAccessObject implements SignupUserDataAccessInterface,
                                                LoginUserDataAccessInterface,
                                                ChangePasswordUserDataAccessInterface {
@@ -63,6 +63,16 @@ public class DBUserDataAccessObject implements SignupUserDataAccessInterface,
         catch (IOException | JSONException ex) {
             throw new RuntimeException(ex);
         }
+    }
+
+    @Override
+    public void setCurrentUser(String name) {
+
+    }
+
+    @Override
+    public String getCurrentUser() {
+        return "";
     }
 
     @Override
